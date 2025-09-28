@@ -23,9 +23,10 @@ model Admin {
 }
 model Blog{
   id Int @id @default(autoincrement())
-  title String 
+  title String @unique
   content String
   thumbnail String
+  description String
   tags String[]
   views Int @default(0)
   createdAt DateTime @default(now())
@@ -33,7 +34,7 @@ model Blog{
 }
 model Project{
   id Int @id @default(autoincrement())
-  title String
+  title String @unique
   thumbnail String
   description String
   githubLink String?

@@ -13,11 +13,11 @@ const adminLogin = async (payload: ILogin) => {
     where: { email: payload.email },
   });
     if (!admin) {
-        throw new AppError(httpStatus.UNAUTHORIZED,"Login Failed")
+        throw new AppError(httpStatus.UNAUTHORIZED,"Invalid Email")
     }
     const passwordMatched = await bcrypt.compare(payload.password, admin.password)
     if (!passwordMatched) {
-        throw new AppError(httpStatus.UNAUTHORIZED,"Password Doesn't matched")
+        throw new AppError(httpStatus.UNAUTHORIZED,"Password Doesn't Matched")
     }
     return admin
 };
