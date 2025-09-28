@@ -2,6 +2,7 @@ import http, { Server } from "http";
 import { prisma } from "./app/config/db";
 import app from "./app";
 import { envVariables } from "./app/config/env";
+import { seedAdmin } from "./app/utils/seedAdmin";
 
 let server: Server | null = null;
 
@@ -72,4 +73,5 @@ function handleProcessEvents() {
 (async () => {
   await connectToDB();
   await startServer();
+  await seedAdmin()
 })();
