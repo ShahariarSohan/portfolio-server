@@ -15,6 +15,7 @@ datasource db {
 
 
 model Admin {
+  id Int @id
  name String
  email String @unique
  password String
@@ -22,7 +23,7 @@ model Admin {
 }
 model Blog{
   id Int @id @default(autoincrement())
-  title String @unique
+  title String 
   content String
   thumbnail String
   tags String[]
@@ -32,11 +33,11 @@ model Blog{
 }
 model Project{
   id Int @id @default(autoincrement())
-  title String @unique
+  title String
   thumbnail String
   description String
-  githubLink String
-  liveLink String
+  githubLink String?
+  liveLink String?
   features String[]
   tags String[]
 }

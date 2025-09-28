@@ -4,7 +4,8 @@ import bcrypt from "bcrypt";
 import { prisma } from "../config/db";
 
 export const seedAdmin = async () => {
-  const adminPayload: Prisma.AdminCreateInput = {
+   const adminPayload: Prisma.AdminCreateInput = {
+    id: Math.floor(Math.random() * 1000000),
     name: envVariables.ADMIN_NAME,
     email: envVariables.ADMIN_EMAIL,
     password: await bcrypt.hash(
@@ -20,10 +21,10 @@ export const seedAdmin = async () => {
       },
     });
     if (admin) {
-      console.log("Admin already exist");
+      console.log("😡 Admin already exist");
       return;
     }
-     const created = await prisma.admin.create({ data: adminPayload });
+     await prisma.admin.create({ data: adminPayload });
      console.log("Admin created for once")
   } catch (err) {
     console.log("Error happened Creating Admin", err);
