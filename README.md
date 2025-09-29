@@ -1,4 +1,4 @@
-# 🌐 My Portfolio Website – Backend API
+# 🌐 My Portfolio Server + Backend API
 
 A **secure and modular backend API** for my portfolio website.  
 Built with **Express.js + Prisma + Supabase (PostgreSQL)**, following **enterprise-grade architecture**.  
