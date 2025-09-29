@@ -29,8 +29,8 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).json({message:"Portfolio server is running"})
 })
 app.use("/api/v1/auth", authRoutes);
-app.use("/api/v1/blog", blogRoutes);
-app.use("/api/v1/project", projectRoutes);
+app.use("/api/v1/blogs", blogRoutes);
+app.use("/api/v1/projects", projectRoutes);
 app.use(globalErrorHandler)
 app.use(notFound)
 
