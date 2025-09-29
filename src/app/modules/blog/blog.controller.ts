@@ -47,7 +47,7 @@ const updateBlogById = catchAsync(
     sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: "Updated blog successfully",
+      message: "Blog Updated Successfully",
       data: data,
     });
   }
