@@ -68,20 +68,20 @@ Designed to manage **blogs, projects, and portfolio owner authentication** for a
 
 **Example `.env`:**
 
-# Clone the repo
+### Clone the repo
 git clone https://github.com/ShahariarSohan/portfolio-server.git
 
-# Navigate to the project
+### Navigate to the project
 cd portfolio-backend
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Run development server
+### Run development server
 npm run dev
 
-# Prisma migration (if needed)
+### Prisma migration (if needed)
 npx prisma migrate dev --name init
 
-# Seed database
+### Seed database
 npm run prisma:seed
