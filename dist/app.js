@@ -19,7 +19,7 @@ app.use((0, cors_1.default)({
     credentials: true,
 }));
 app.get("/", (req, res) => {
-    res.status(200).json({ message: "Portfolio server is running" });
+    res.status(200).json({ message: "Shahariar Sohan Portfolio Server Is Running" });
 });
 app.use("/api/v1/auth", auth_route_1.authRoutes);
 app.use("/api/v1/blogs", blog_route_1.blogRoutes);

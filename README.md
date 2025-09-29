@@ -1,6 +1,6 @@
-# 🌐 Portfolio Website – Backend API
+# 🌐 My Portfolio Website – Backend API
 
-A **secure and modular backend API** for a personal portfolio website.  
+A **secure and modular backend API** for my portfolio website.  
 Built with **Express.js + Prisma + Supabase (PostgreSQL)**, following **enterprise-grade architecture**.  
 
 Designed to manage **blogs, projects, and portfolio owner authentication** for a seamless dynamic experience.
@@ -9,12 +9,12 @@ Designed to manage **blogs, projects, and portfolio owner authentication** for a
 
 ## ✨ Core Features
 
-- 🔐 **JWT Authentication & Authorization** – Owner-only access for private features  
-- 📝 **Blog Management** – Create, Read, Update, Delete (Owner only)  
-- 💼 **Projects Management** – Dynamic project CRUD operations (Owner only)  
+- 🔐 **JWT Authentication & Authorization** –  Only I can access private features  
+- 📝 **Blog Management** – Create, Read, Update, Delete ( Only me)  
+- 💼 **Projects Management** – Dynamic project CRUD operations ( Only me)  
 - 📄 **About Me Section** – Static personal info served via API (Public)  
 - ⚡ **Secure password hashing** with bcrypt  
-- 📊 **Dashboard Endpoints** for portfolio owner management  
+- 📊 **Dashboard Endpoints** for portfolio owner management (only me)  
 
 ---
 
@@ -37,23 +37,24 @@ Designed to manage **blogs, projects, and portfolio owner authentication** for a
 ---
 ## 🔗 Live Link 
 
-👉 [Live Server](https://my-portfolio-server-sand.vercel.app)
+👉 [Live Server](https://shahariarsohan-server.vercel.app)
 
 ---
 ## 🔗 API Endpoints 
 
 | Endpoint          | Method | Access | Description          |
 |-------------------|--------|--------|----------------------|        
-| `/api/v1/auth/login` | POST   | Public | Login portfolio owner|
-| `/api/v1/blogs`      | GET    | Public | Fetch all blogs      |
+| `/api/v1/auth/login` | POST   | Private | Login portfolio   |
+| `/api/v1/blogs`      | GET    | Public | Fetch all blogs   |
 | `/api/v1/blogs/:id`  | GET    | Public | Fetch individual blog by ID |
 | `/api/v1/blogs`      | POST   | Private| Create new blog |
 | `/api/v1/blogs/:id`  | PATCH  | Private| Update blog by ID |
-| `/api/v1/blogs/:id`  | DELETE | Private| Delete blog by ID |
+| `/api/v1/blogs/:id`  | DELETE | Private| Delete blog by ID  |
 | `/api/v1/projects`   |  GET   | Public | Fetch all projects |
-| `/api/v1/projects`   | POST   | Private| Create new project |
-| `/api/v1/projects/:id`| PATCH | Private| Update project by ID |
-| `/api/v1/projects/:id`| DELETE | Private| Delete project by ID |
+| `/api/v1/projects/:id`| GET   | Public | Fetch individual blog by ID |
+| `/api/v1/projects`    | POST  | Private| Create new project |
+| `/api/v1/projects/:id`| PATCH | Private| Update project by ID  |
+| `/api/v1/projects/:id`| DELETE| Private| Delete project by ID  |
 
 
 > 

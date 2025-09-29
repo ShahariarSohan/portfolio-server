@@ -26,7 +26,7 @@ app.use(
 
 
 app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({message:"Portfolio server is running"})
+  res.status(200).json({message:"Shahariar Sohan Portfolio Server Is Running"})
 })
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/blogs", blogRoutes);
