@@ -37,7 +37,7 @@ Designed to manage **blogs, projects, and portfolio owner authentication** for a
 ---
 ## 🔗 Live Link 
 
-👉 [Live Server]()
+👉 [Live Server](https://my-portfolio-server-sand.vercel.app)
 
 ---
 ## 🔗 API Endpoints 
@@ -68,20 +68,11 @@ Designed to manage **blogs, projects, and portfolio owner authentication** for a
 
 **Example `.env`:**
 
-### Clone the repo
-git clone https://github.com/ShahariarSohan/portfolio-server.git
+## Installation Guide
 
-### Navigate to the project
-cd portfolio-backend
-
-### Install dependencies
-npm install
-
-### Run development server
-npm run dev
-
-### Prisma migration (if needed)
-npx prisma migrate dev --name init
-
-### Seed database
-npm run prisma:seed
+- git clone https://github.com/ShahariarSohan/portfolio-server.git
+- cd portfolio-backend
+- npm install
+- npm run dev
+- npx prisma migrate dev --name init
+- npm run prisma:seed
