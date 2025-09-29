@@ -68,7 +68,7 @@ Designed to manage **blogs, projects, and portfolio owner authentication** for a
 
 **Example `.env`:**
 
-## Installation Guide
+## 💻 Installation Guide
 
 - git clone https://github.com/ShahariarSohan/portfolio-server.git
 - cd portfolio-backend
