@@ -7,6 +7,7 @@ import { authRoutes } from "./app/modules/auth/auth.route";
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import { blogRoutes } from './app/modules/blog/blog.route';
 import { projectRoutes } from './app/modules/project/project.route';
+import { statsRoutes } from './app/modules/stats/stats.route';
 
 
 
@@ -31,6 +32,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/blogs", blogRoutes);
 app.use("/api/v1/projects", projectRoutes);
+app.use("/api/v1/stats", statsRoutes);
 app.use(globalErrorHandler)
 app.use(notFound)
 
