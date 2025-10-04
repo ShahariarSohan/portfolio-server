@@ -13,7 +13,7 @@ const globalErrorHandler = async (err, req, res, next) => {
         if (err.code === "P2002") {
             // Unique constraint failed (e.g. duplicate email)
             statusCode = http_status_codes_1.default.CONFLICT;
-            message = "Duplicate record — already exists";
+            message = "Title already exists";
         }
         else if (err.code === "P2003") {
             // Foreign key constraint failed (invalid relation)

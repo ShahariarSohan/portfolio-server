@@ -8,12 +8,6 @@ const http_status_codes_1 = __importDefault(require("http-status-codes"));
 const db_1 = require("../../config/db");
 const appError_1 = __importDefault(require("../../errorHelpers/appError"));
 const createProject = async (payload) => {
-    const title = await db_1.prisma.project.findUnique({
-        where: { title: payload.title },
-    });
-    if (title) {
-        throw new appError_1.default(http_status_codes_1.default.CONFLICT, "Title should be unique");
-    }
     const project = await db_1.prisma.project.create({ data: payload });
     return project;
 };

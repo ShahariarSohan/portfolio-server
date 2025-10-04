@@ -11,6 +11,7 @@ const auth_route_1 = require("./app/modules/auth/auth.route");
 const globalErrorHandler_1 = __importDefault(require("./app/middlewares/globalErrorHandler"));
 const blog_route_1 = require("./app/modules/blog/blog.route");
 const project_route_1 = require("./app/modules/project/project.route");
+const stats_route_1 = require("./app/modules/stats/stats.route");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 app.use("/api/v1/auth", auth_route_1.authRoutes);
 app.use("/api/v1/blogs", blog_route_1.blogRoutes);
 app.use("/api/v1/projects", project_route_1.projectRoutes);
+app.use("/api/v1/stats", stats_route_1.statsRoutes);
 app.use(globalErrorHandler_1.default);
 app.use(notFound_1.notFound);
 exports.default = app;
